@@ -18,6 +18,7 @@ export class CustomerService {
     return this.http.get<Array<Customer>>(environment.backendHost+"/customers/search?keyword="+keyword)
   }
   public saveCustomer(customer: Customer):Observable<Customer>{
+    customer.id = 0
     return this.http.post<Customer>(environment.backendHost+"/customers",customer);
   }
   public deleteCustomer(id: number){
