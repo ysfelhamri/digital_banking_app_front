@@ -22,7 +22,7 @@ export class AuthService {
     }
     let params = new HttpParams()
       .set("username", username).set("password", password);
-    return this.http.post(environment.backendHost+"auth/login", params, options);
+    return this.http.post(environment.backendHost+"/auth/login", params, options);
   }
 
   loadProfile(data: any) {

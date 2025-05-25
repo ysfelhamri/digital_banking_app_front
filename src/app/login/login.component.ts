@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit{
       next : data=>{
         this.authService.loadProfile(data);
         //this.newCustomerFormGroup.reset();
-        this.router.navigateByUrl("/admin");
+        this.router.navigateByUrl("admin");
       },
       error : err => {
         console.log(err);

@@ -19,7 +19,7 @@ export class AccountsComponent implements OnInit {
   operationFromGroup! : FormGroup;
   errorMessage! :string ;
 
-  constructor(private fb : FormBuilder, private accountService : AccountsService, private authService: AuthService) { }
+  constructor(private fb : FormBuilder, private accountService : AccountsService, protected authService: AuthService) { }
 
   ngOnInit(): void {
     this.accountFormGroup=this.fb.group({
